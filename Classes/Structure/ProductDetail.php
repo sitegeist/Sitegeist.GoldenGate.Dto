@@ -22,7 +22,7 @@ class ProductDetail extends Structure
      * @var string
      */
     protected $unit = '';
-    
+
     /**
      * @var ProductDetailImage[]
      */
@@ -32,11 +32,6 @@ class ProductDetail extends Structure
      * @var ProductDetailPrice[]
      */
     protected $prices = [];
-
-    /**
-     * @var FilterGroupOptionReference[]
-     */
-    protected $filterGroupOptionReferences = [];
 
     /**
      * @return bool
@@ -133,21 +128,5 @@ class ProductDetail extends Structure
     public function setPrices(array $prices)
     {
         $this->prices = $prices;
-    }
-
-    /**
-     * @return FilterGroupOptionReference[]
-     */
-    public function getFilterGroupOptionReferences(): array
-    {
-        return $this->filterGroupOptionReferences;
-    }
-
-    /**
-     * @param FilterGroupOptionReference[] $filterGroupOptionReferences
-     */
-    public function setFilterGroupOptionReferences(array $filterGroupOptionReferences)
-    {
-        $this->filterGroupOptionReferences = $filterGroupOptionReferences;
     }
 }
