@@ -1,6 +1,6 @@
 <?php
 namespace Sitegeist\Goldengate\Dto\Structure;
 
-class FilterGroupReference extends Reference
+class FilterGroupReference extends Structure
 {
 }
