@@ -15,9 +15,9 @@ class ProductDetailImage extends Structure
     protected $title = '';
 
     /**
-     * @var ProductDetailImageVariant[]
+     * @var ProductDetailImageSize[]
      */
-    protected $imageVariants = [];
+    protected $imageSizes = [];
 
     /**
      * @return bool
@@ -52,18 +52,18 @@ class ProductDetailImage extends Structure
     }
 
     /**
-     * @return ProductDetailImageVariant[]
+     * @return ProductDetailImageSize[]
      */
-    public function getImageVariants(): array
+    public function getImageSizes(): array
     {
-        return $this->imageVariants;
+        return $this->imageSizes;
     }
 
     /**
-     * @param ProductDetailImageVariant[] $imageVariants
+     * @param ProductDetailImageSize[] $imageSizes
      */
-    public function setImageVariants(array $imageVariants)
+    public function setImageSizes(array $imageSizes)
     {
-        $this->imageVariants = $imageVariants;
+        $this->imageSizes = $imageSizes;
     }
 }
