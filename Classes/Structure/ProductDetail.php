@@ -16,11 +16,6 @@ class ProductDetail extends Structure
     /**
      * @var string
      */
-    protected $description = '';
-
-    /**
-     * @var string
-     */
     protected $unit = '';
 
     /**
@@ -64,22 +59,6 @@ class ProductDetail extends Structure
     public function setNumber(string $number)
     {
         $this->number = $number;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description)
-    {
-        $this->description = $description;
     }
 
     /**
