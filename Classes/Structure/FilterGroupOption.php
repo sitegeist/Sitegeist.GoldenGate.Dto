@@ -3,10 +3,6 @@ namespace Sitegeist\Goldengate\Dto\Structure;
 
 class FilterGroupOption extends Structure
 {
-    /**
-     * @var string
-     */
-    protected $id = '';
 
     /**
      * @var string
@@ -17,22 +13,6 @@ class FilterGroupOption extends Structure
      * @var FilterGroupReference
      */
     protected $filterGroupReference;
-
-    /**
-     * @return string
-     */
-    public function getId(): string
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param string $id
-     */
-    public function setId(string $id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * @return string
