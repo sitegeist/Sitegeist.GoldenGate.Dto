@@ -67,6 +67,22 @@ class Product extends Structure
     }
 
     /**
+     * @return ProductDetail|null
+     */
+    public function getMainDetail()
+    {
+        foreach ($this->details as $detail) {
+            /**
+             * @var ProductDetail $detail
+             */
+            if ($detail->isMain()) {
+                return $detail;
+            }
+        }
+        return null;
+    }
+
+    /**
      * @return ProductDetail[]
      */
     public function getDetails() : array

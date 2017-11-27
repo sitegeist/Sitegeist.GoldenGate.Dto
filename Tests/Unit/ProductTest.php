@@ -48,5 +48,5 @@ class ProductTest extends TestCase {
 
         $this->assertEquals($product, $restore);
     }
-   
+
 }

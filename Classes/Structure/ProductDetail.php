@@ -78,6 +78,22 @@ class ProductDetail extends Structure
     }
 
     /**
+     * @return ProductDetailImage|null
+     */
+    public function getMainImage()
+    {
+        foreach( $this->images as $image) {
+            /**
+             * @var ProductDetailImage $price
+             */
+            if ($image->isMain()) {
+                return $image;
+            }
+        }
+        return null;
+    }
+
+    /**
      * @return ProductDetailImage[]
      */
     public function getImages(): array
@@ -91,6 +107,22 @@ class ProductDetail extends Structure
     public function setImages(array $images)
     {
         $this->images = $images;
+    }
+
+    /**
+     * @return ProductDetailPrice|null
+     */
+    public function getMainPrice()
+    {
+        foreach( $this->prices as $price) {
+            /**
+             * @var ProductDetailPrice $price
+             */
+            if ($price->isMain()) {
+                return $price;
+            }
+        }
+        return null;
     }
 
     /**

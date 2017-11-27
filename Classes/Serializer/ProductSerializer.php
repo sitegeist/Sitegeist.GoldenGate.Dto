@@ -6,6 +6,11 @@ use Sitegeist\Goldengate\Dto\Structure\Product;
 class ProductSerializer extends AbstractSerializer
 {
     /**
+     * @var array
+     */
+    protected $ignoredAttributes = ['mainDetail', 'mainImage', 'mainPrice'];
+
+    /**
      * @param Product $product
      * @return string
      */

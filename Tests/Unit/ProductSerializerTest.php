@@ -57,6 +57,8 @@ class ProductSerializerTest extends TestCase {
 
         $this->assertEquals($product, $restore);
 
+        var_dump($data);
+        var_dump($restore->getMainDetail());
     }
 
 }
