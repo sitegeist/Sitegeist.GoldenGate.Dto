@@ -3,7 +3,6 @@ namespace Sitegeist\Goldengate\Dto\Structure;
 
 class Product extends Structure
 {
-
     /**
      * @var string
      */
@@ -18,16 +17,6 @@ class Product extends Structure
      * @var ProductDetail[]
      */
     protected $details;
-
-    /**
-     * @var ProductReference[]
-     */
-    protected $similarProductReferences = [];
-
-    /**
-     * @var ProductReference[]
-     */
-    protected $crossSellingProductReferences = [];
 
     /**
      * @var FilterGroupOptionReference[]
@@ -83,38 +72,6 @@ class Product extends Structure
     }
 
     /**
-     * @return ProductReference[]
-     */
-    public function getSimilarProductReferences(): array
-    {
-        return $this->similarProductReferences;
-    }
-
-    /**
-     * @param ProductReference[] $similarProductReferences
-     */
-    public function setSimilarProductReferences(array $similarProductReferences)
-    {
-        $this->similarProductReferences = $similarProductReferences;
-    }
-
-    /**
-     * @return ProductReference[]
-     */
-    public function getCrossSellingProductReferences(): array
-    {
-        return $this->crossSellingProductReferences;
-    }
-
-    /**
-     * @param ProductReference[] $crossSellingProductReferences
-     */
-    public function setCrossSellingProductReferences(array $crossSellingProductReferences)
-    {
-        $this->crossSellingProductReferences = $crossSellingProductReferences;
-    }
-
-    /**
      * @return FilterGroupOptionReference[]
      */
     public function getFilterGroupOptionReferences(): array
@@ -129,5 +86,4 @@ class Product extends Structure
     {
         $this->filterGroupOptionReferences = $filterGroupOptionReferences;
     }
-
 }
