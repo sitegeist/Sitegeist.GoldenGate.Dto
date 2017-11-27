@@ -1,7 +1,7 @@
 <?php
 namespace Sitegeist\Goldengate\Dto\Structure;
 
-class ProductDetailImageSize extends Structure
+class ProductDetailImageSize
 {
     /**
      * @var integer
