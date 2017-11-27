@@ -14,7 +14,7 @@ class ProductDetailPrice extends Structure
     protected $from = 0;
 
     /**
-     * @var integer
+     * @var string
      */
     protected $to = 0;
 
@@ -66,17 +66,17 @@ class ProductDetailPrice extends Structure
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getTo(): int
+    public function getTo(): string
     {
         return $this->to;
     }
 
     /**
-     * @param int $to
+     * @param string $to
      */
-    public function setTo(int $to)
+    public function setTo(string $to)
     {
         $this->to = $to;
     }
