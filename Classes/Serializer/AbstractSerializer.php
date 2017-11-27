@@ -17,16 +17,21 @@ abstract class AbstractSerializer
      */
     private $serializer;
 
+    /**
+     * @var array
+     */
+    protected $ignoredAttributes = [];
+
     public function __construct()
     {
         $encoders = [
             new JsonEncoder()
         ];
 
-        $normalizers = [
-            new ArrayDenormalizer(),
-            new ObjectNormalizer(null, null, null, new PhpDocExtractor())
-        ];
+        $arrayNormalizer = new ArrayDenormalizer();
+        $objectNormalizer = new ObjectNormalizer(null, null, null, new PhpDocExtractor());
+        $objectNormalizer->setIgnoredAttributes($this->ignoredAttributes);
+        $normalizers = [$arrayNormalizer, $objectNormalizer];
 
         $this->serializer = new Serializer($normalizers, $encoders);
     }
