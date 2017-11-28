@@ -29,6 +29,11 @@ class ProductDetail extends Structure
     protected $prices = [];
 
     /**
+     * @var string
+     */
+    protected $uri = '';
+
+    /**
      * @return bool
      */
     public function isMain(): bool
@@ -139,5 +144,21 @@ class ProductDetail extends Structure
     public function setPrices(array $prices)
     {
         $this->prices = $prices;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUri()
+    {
+        return $this->uri;
+    }
+
+    /**
+     * @param string $uri
+     */
+    public function setUri($uri)
+    {
+        $this->uri = $uri;
     }
 }
