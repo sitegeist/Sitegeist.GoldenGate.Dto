@@ -19,6 +19,11 @@ class Filter extends Structure
     protected $filterGroupOptionReferences = [];
 
     /**
+     * @var CategoryReference[]
+     */
+    protected $categoryReferences = [];
+
+    /**
      * @return string
      */
     public function getMinPrice(): string
@@ -66,7 +71,20 @@ class Filter extends Structure
         $this->filterGroupOptionReferences = $filterGroupOptionReferences;
     }
 
+    /**
+     * @return CategoryReference[]
+     */
+    public function getCategoryReferences(): array
+    {
+        return $this->categoryReferences;
+    }
 
-
+    /**
+     * @param CategoryReference[] $categoryReferences
+     */
+    public function setCategoryReferences(array $categoryReferences)
+    {
+        $this->categoryReferences = $categoryReferences;
+    }
 
 }
